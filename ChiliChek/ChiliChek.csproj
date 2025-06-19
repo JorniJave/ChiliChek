@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Database - Копировать\**" />
+    <Compile Remove="Models - Копировать\**" />
+    <Compile Remove="Scanner - Копировать\**" />
+    <Compile Remove="Server - Копировать\**" />
+    <Compile Remove="Tools - Копировать\**" />
+    <Compile Remove="UI - Копировать\**" />
+    <EmbeddedResource Remove="Database - Копировать\**" />
+    <EmbeddedResource Remove="Models - Копировать\**" />
+    <EmbeddedResource Remove="Scanner - Копировать\**" />
+    <EmbeddedResource Remove="Server - Копировать\**" />
+    <EmbeddedResource Remove="Tools - Копировать\**" />
+    <EmbeddedResource Remove="UI - Копировать\**" />
+    <None Remove="Database - Копировать\**" />
+    <None Remove="Models - Копировать\**" />
+    <None Remove="Scanner - Копировать\**" />
+    <None Remove="Server - Копировать\**" />
+    <None Remove="Tools - Копировать\**" />
+    <None Remove="UI - Копировать\**" />
+    <Page Remove="Database - Копировать\**" />
+    <Page Remove="Models - Копировать\**" />
+    <Page Remove="Scanner - Копировать\**" />
+    <Page Remove="Server - Копировать\**" />
+    <Page Remove="Tools - Копировать\**" />
+    <Page Remove="UI - Копировать\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Scanner\" />
+    <Folder Include="Tools\" />
+    <Folder Include="UI\" />
+    <Folder Include="UI\ViewModels\" />
+    <Folder Include="Server\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="9.0.6" />
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.11" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Tools\Everything.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Tools\ExecutedProgramsList.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Tools\JournalTrace.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Tools\RegScanner.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Tools\shellbag_analyzer_cleaner.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Tools\USBDeview.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

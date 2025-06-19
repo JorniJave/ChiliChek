@@ -1,0 +1,65 @@
+﻿<Window x:Class="ChiliChek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ChiliChek" Height="600" Width="1000" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/Resources/chili_background.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Верхняя панель -->
+        <StackPanel Orientation="Horizontal" Background="#FF4A4A" Height="40">
+            <Image Source="pack://application:,,,/Resources/chili_logo.png" Width="30" Margin="10,0,0,0"/>
+            <TextBlock Text="ChiliChek" Foreground="White" FontSize="18" VerticalAlignment="Center" Margin="5,0,0,0"/>
+            <TextBlock Text="Версия 1.0.0" Foreground="White" FontSize="12" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <TextBlock Text="Пользователь: [Имя]" Foreground="White" FontSize="12" VerticalAlignment="Center" Margin="10,0,10,0"/>
+        </StackPanel>
+
+        <!-- Основная область -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Левая панель навигации -->
+            <StackPanel Background="#FF6666" Width="200">
+                <Button Content="Информация" Click="InfoButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button Content="Приложения" Click="AppsButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button Content="Библиотека" Click="LibraryButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button Content="Проверка браузера" Click="BrowserCheckButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button Content="Проверка Steam" Click="SteamCheckButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button Content="Система" Click="SystemButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button Content="Support" Click="SupportButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button Content="Настройки" Click="SettingsButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button x:Name="EverythingButton" Content="Everything" Click="EverythingButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button x:Name="JournalTraceButton" Content="JournalTrace" Click="JournalTraceButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button x:Name="ShellBagAnalyzerButton" Content="ShellBagAnalyzer" Click="ShellBagAnalyzerButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button x:Name="ExecutedProgramsListButton" Content="ExecutedProgramsList" Click="ExecutedProgramsListButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button x:Name="RegScannerButton" Content="RegScanner" Click="RegScannerButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+                <Button x:Name="USBDeviewButton" Content="USBDeview" Click="USBDeviewButton_Click" Background="#FF8888" Foreground="White" Margin="5" Padding="10,5"/>
+            </StackPanel>
+
+            <!-- Правая область контента -->
+            <TextBox x:Name="OutputTextBox" Grid.Column="1" Margin="10" Background="#FF9999" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+        </Grid>
+
+        <!-- Нижняя панель уведомлений -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Background="#FF4A4A" Height="30">
+            <TextBlock Text="Уведомления" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <ProgressBar Width="200" Height="20" Margin="10,0,0,0" Value="0" Maximum="100"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,0">
+                <Image Source="pack://application:,,,/Resources/vk.png" Width="20" Margin="5,0"/>
+                <Image Source="pack://application:,,,/Resources/telegram.png" Width="20" Margin="5,0"/>
+                <Image Source="pack://application:,,,/Resources/youtube.png" Width="20" Margin="5,0"/>
+                <Image Source="pack://application:,,,/Resources/chrome.png" Width="20" Margin="5,0"/>
+                <Button Content="Что нового" Background="#FF6666" Foreground="White" Padding="5,0" Click="WhatsNewButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
