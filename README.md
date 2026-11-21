@@ -1,10 +1,10 @@
-# ChiliChek (C# / WPF)
+﻿# ChiliChek (C# / WPF)
 
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)](https://www.microsoft.com/windows)
 [![UI](https://img.shields.io/badge/UI-WPF-5C2D91)](#)
 
-Десктоп-утилита на **WPF (.NET 8)** для локальных проверок системы: сканеры, просмотр артефактов, работа с SQLite.
+Чекер на читы для **Rust** (WPF / .NET 8): локальные сканеры артефактов системы и SQLite-хранилище результатов.
 
 > Pet-проект. Связанный Python/Electron вариант: [ChiliChekPY](https://github.com/JorniJave/ChiliChekPY) (private).
 
@@ -42,3 +42,4 @@ ChiliChek/
 ## Лицензия
 
 MIT (pet project)
+
